@@ -1,0 +1,30 @@
+.body-blogs {
+  background-color: #f7f7f7;
+}
+.hero-section {
+  position: relative;
+  min-height: 80vh;
+  background: #f7f7f7;
+  overflow: hidden;
+}
+
+.hero-image {
+  height: 80vh;
+  object-fit: cover;
+  filter: brightness(0.15);
+}
+
+.hero-content {
+  top: 5%;
+  width: 70%;
+}
+.hero-content h1 {
+  color: #a9f868;
+}
+.hero-content span,
+.hero-content p {
+  color: #fff;
+}
+.article-box {
+  margin-top: -90px;
+}

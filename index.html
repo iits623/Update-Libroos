@@ -1,0 +1,817 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/bootstrap.rtl.css" />
+    <link rel="stylesheet" href="./assets/css/custom.css" />
+    <link rel="stylesheet" href="./assets/css/header.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <!-------------------------- Start Navbar -------------------------->
+      <div class="container">
+        <nav
+          class="navbar navbar-expand-md z-2 py-2 shadow-lg overflow-x-hidden fixed-top bg-light"
+        >
+          <div class="container d-flex justify-content-between">
+            <button
+              class="navbar-toggler d-md-none"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#mobileMenu"
+              aria-controls="mobileMenu"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div
+              class="navbar-header d-flex align-items-center justify-content-between"
+            >
+              <div class="header-logo font30 fw-bolder d-none d-md-block">
+                <a href="{% url 'index' %}">
+                  <img
+                    src="./image/header/logo-lib.png"
+                    width="200"
+                    alt="لوگوی سایت"
+                  />
+                </a>
+              </div>
+
+              <div
+                class="collapse navbar-collapse flex-grow-0 d-none d-md-block"
+              >
+                <ul
+                  class="navbar-nav p-2 d-flex align-items-center gap-4 font18"
+                >
+                  <li class="nav-item">
+                    <a
+                      class="nav-link text-nowrap link-header"
+                      href="{% url 'shop' %}"
+                      >فروشگاه</a
+                    >
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link link-header" href="{% url 'blogs' %}"
+                      >آموزش</a
+                    >
+                  </li>
+
+                  <li class="nav-item">
+                    <a
+                      class="nav-link text-nowrap link-header"
+                      href="{% url 'shop' %}"
+                      >درباره ما</a
+                    >
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link link-header" href="{% url 'support'%}"
+                      >پشتیبانی</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link link-header" href="www.libroos-team.ir"
+                      >لیبروس گیم</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <ul
+                  class="list-unstyled d-flex align-items-center gap-4 m-0 p-0"
+                >
+                  <li class="nav-item d-none d-md-block">
+                    <a class="nav-link link-header" href="#/">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="22"
+                        height="22"
+                        fill="currentColor"
+                        class="bi bi-twitter-x"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="nav-item d-none d-md-block">
+                    <a class="nav-link link-header" href="#/">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="22"
+                        height="22"
+                        fill="currentColor"
+                        class="bi bi-youtube"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link link-header" href="#/">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="22"
+                        height="22"
+                        fill="currentColor"
+                        class="bi bi-search"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link link-header" href="#/">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="26"
+                        height="26"
+                        fill="currentColor"
+                        class="bi bi-person"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link link-header" href="#/">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="22"
+                        height="22"
+                        fill="currentColor"
+                        class="bi bi-bag"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div
+          class="offcanvas offcanvas-end bg-black text-light text-end w-75"
+          tabindex="-1"
+          id="mobileMenu"
+          aria-labelledby="mobileMenuLabel"
+        >
+          <div class="offcanvas-header justify-content-end">
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="بستن"
+            ></button>
+          </div>
+          <div class="offcanvas-body px-4 py-3">
+            <ul class="navbar-nav font18 p-0">
+              <li class="nav-item">
+                <a class="nav-link text-offcanvas" href="#/">پوشش های توییچ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-offcanvas" href="#/">هشدار ها</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-offcanvas" href="#/">فروشگاه</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-offcanvas" href="#/">آموزش</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-offcanvas" href="#/">ساخت</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-offcanvas" href="#/">پشتیبانی</a>
+              </li>
+
+              <li class="nav-item mt-4">
+                <div class="d-flex gap-4">
+                  <a class="nav-link link-header text-offcanvas" href="#/">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="22"
+                      height="22"
+                      fill="currentColor"
+                      class="bi bi-twitter-x"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"
+                      />
+                    </svg>
+                  </a>
+                  <a class="nav-link link-header text-offcanvas" href="#/">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="22"
+                      height="22"
+                      fill="currentColor"
+                      class="bi bi-youtube"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-------------------------- End Navbar -------------------------->
+
+      <!-------------------------- Start Header -------------------------->
+      <div class="position-relative bg-black text-light">
+        <div
+          id="particles-js"
+          class="position-absolute w-100 h-100 top-0 left-0 z-0"
+        ></div>
+
+        <div class="content">
+          <div
+            class="py-100 text-light z-1 position-relative overflow-x-hidden"
+          >
+            <h1 class="font46 fw-bold my-5 overflow-x-visible text-center">
+              خدمات استریم لیبروس
+            </h1>
+
+            <p class="font18 w-75 mx-auto mb-5 text-center">
+              تمامی خدماتی که یک استریمر نیاز دارد در لیبروس برای شما جمع آوری
+              شده است
+            </p>
+
+            <div class="row g-4 my-5 justify-content-center">
+              <div
+                class="col-12 col-sm-6 col-lg-2"
+                style="box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5)"
+              >
+                <img
+                  src="./image/header/box1.jpg"
+                  class="w-100 rounded-4"
+                  alt="box1"
+                />
+              </div>
+              <div
+                class="col-12 col-sm-6 col-lg-2"
+                style="box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5)"
+              >
+                <img
+                  src="./image/header/box2.jpg"
+                  class="w-100 rounded-4"
+                  alt="box2"
+                />
+              </div>
+              <div
+                class="col-12 col-sm-6 col-lg-2"
+                style="box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5)"
+              >
+                <img
+                  src="./image/header/box3.jpg"
+                  class="w-100 rounded-4"
+                  alt="box3"
+                />
+              </div>
+              <div
+                class="col-12 col-sm-6 col-lg-2"
+                style="box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5)"
+              >
+                <img
+                  src="./image/header/box4.jpg"
+                  class="w-100 rounded-4"
+                  alt="box4"
+                />
+              </div>
+            </div>
+
+            <div class="row justify-content-center mt-5">
+              <span class="font18 text-center">قابل استفاده در پلتفرم های</span>
+              <div class="col-12 col-sm-8">
+                <div
+                  class="py-4 px-5 d-flex flex-wrap gap-3 align-items-center justify-content-center"
+                >
+                  <a
+                    href="#"
+                    class="box-StreamElements rounded-4 d-flex align-items-center justify-content-center"
+                  >
+                    <img
+                      src="./image/icon/StreamElements-Icon-Only-01.svg"
+                      alt="StreamElements"
+                    />
+                  </a>
+                  <a
+                    href="#"
+                    class="box-Streamlabs rounded-4 d-flex align-items-center justify-content-center"
+                  >
+                    <img
+                      src="./image/icon/ico_streamlabs-1-color.svg"
+                      alt="Streamlabs"
+                    />
+                  </a>
+
+                  <a
+                    href="#"
+                    class="box-Studio rounded-4 d-flex align-items-center justify-content-center"
+                  >
+                    <img
+                      src="./image/icon/ico_obs-studio.svg"
+                      alt="OBS Studio"
+                    />
+                  </a>
+
+                  <a
+                    href="#"
+                    class="box-YouTube rounded-4 d-flex align-items-center justify-content-center"
+                  >
+                    <img src="./image/icon/ico_youtube.svg" alt="YouTube" />
+                  </a>
+
+                  <a
+                    href="#"
+                    class="box-Kick rounded-4 d-flex align-items-center justify-content-center"
+                  >
+                    <img src="./image/icon/ico_kick.svg" alt="Kick" />
+                  </a>
+
+                  <a
+                    href="#"
+                    class="box-Twitch rounded-4 d-flex align-items-center justify-content-center"
+                  >
+                    <img src="./image/icon/ico_twitch.svg" alt="Twitch" />
+                  </a>
+                  <a
+                    href="#"
+                    class="box-Aparat rounded-4 d-flex align-items-center justify-content-center"
+                  >
+                    <img src="./image/icon/ico_aparat.svg" alt="Aparat" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-------------------------- End Header -------------------------->
+    </header>
+
+    <!-------------------------- Start Section Widgets -------------------------->
+    <div class="container my-5">
+      <h2 class="overflow-visible my-5 pt-5 text-center">
+        آخرین پوشش ها و ابزار های استریم
+      </h2>
+
+      <div class="row g-5 my-4 justify-content-center">
+        <div class="col-12 col-sm-6 col-lg-3">
+          <img
+            src="./image/header/box4.jpg"
+            class="w-100 rounded-4"
+            alt="box1"
+          />
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+          <img
+            src="./image/header/box3.jpg"
+            class="w-100 rounded-4"
+            alt="box2"
+          />
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+          <img
+            src="./image/header/box2.jpg"
+            class="w-100 rounded-4"
+            alt="box3"
+          />
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+          <img
+            src="./image/header/box1.jpg"
+            class="w-100 rounded-4"
+            alt="box4"
+          />
+        </div>
+      </div>
+
+      <div class="text-center my-5">
+        <a href="#/" class="btn btn-dark px-5 py-3 rounded-4 my-5 font20">
+          مشاهده همه پوشش‌ها و هشدارهای پخش زنده
+        </a>
+      </div>
+    </div>
+    <!-------------------------- End Section Widgets -------------------------->
+
+    <!-------------------------- Start section Selling -------------------------->
+    <div class="container my-5">
+      <h2 class="overflow-visible my-5 text-center fw-bold">
+        پرفروش‌ترین پوشش‌ها و هشدارهای توییچ
+      </h2>
+
+      <div class="row g-4 justify-content-center">
+        <div class="col-6 col-md-4">
+          <img
+            src="./image/header/box1.jpg"
+            class="w-100 rounded-4"
+            alt="وایب – داک رویداد"
+          />
+          <p class="mt-3 text-center">وایب – داک رویداد</p>
+        </div>
+
+        <div class="col-6 col-md-4">
+          <img
+            src="./image/header/box3.jpg"
+            class="w-100 rounded-4"
+            alt="جریان – چت باکس"
+          />
+          <p class="mt-3 text-center">جریان – چت باکس</p>
+        </div>
+
+        <div class="col-6 col-md-4">
+          <img
+            src="./image/header/box4.jpg"
+            class="w-100 rounded-4"
+            alt="ساخت و ساز – بسته جریان"
+          />
+          <p class="mt-3 text-center">ساخت و ساز – بسته جریان</p>
+        </div>
+
+        <div class="col-6 col-md-4">
+          <img
+            src="./image/header/box2.jpg"
+            class="w-100 rounded-4"
+            alt="بسته‌ی استریم - STREAMOS بسته‌ی استریم رنگین‌کمانی"
+          />
+          <p class="mt-3 text-center">
+            بسته‌ی استریم - STREAMOS بسته‌ی استریم رنگین‌کمانی
+          </p>
+        </div>
+
+        <div class="col-6 col-md-4">
+          <img
+            src="./image/header/box5.jpg"
+            class="w-100 rounded-4"
+            alt="رنگین کمانی – بسته جریانی"
+          />
+          <p class="mt-3 text-center">رنگین کمانی – بسته جریانی</p>
+        </div>
+
+        <div class="col-6 col-md-4">
+          <img
+            src="./image/header/box6.jpg"
+            class="w-100 rounded-4"
+            alt="بسته‌ی پخش جریانی سینث‌ویو"
+          />
+          <p class="mt-3 text-center">بسته‌ی پخش جریانی سینث‌ویو</p>
+        </div>
+      </div>
+
+      <div class="text-center my-5">
+        <a href="#/" class="btn btn-dark px-5 py-4 rounded-4 font20">
+          مشاهده همه پوشش‌ها و هشدارهای پخش زنده
+        </a>
+      </div>
+    </div>
+    <!-------------------------- End Section Selling -------------------------->
+
+    <!-------------------------- Start Section Upgrade Discraption -------------------------->
+    <div class="container text-start py-100">
+      <div class="row g-5 align-items-center">
+        <!-- سمت چپ: متن -->
+        <div class="col-md-6 col-12">
+          <h3 class="my-5 overflow-visible fw-bold">
+            ارتقاء بعدی جریان خود را پیدا کنید
+          </h3>
+          <p class="font18 line-height-35">
+            پوشش‌ها و ویجت‌های متناسب با هر استریمر Twitch، YouTube یا Kick را
+            کشف کنید - چه به Just Chatting، بازی، IRL یا فراتر از آن علاقه داشته
+            باشید. مجموعه ما شامل طرح‌های پر جنب و جوش و پرانرژی برای جلسات بازی
+            شدید، طرح‌بندی‌های شیک و مدرن برای چت‌های غیررسمی و تنظیمات متنوع
+            برای موسیقی، ASMR یا استریم‌های خلاقانه است. این مجموعه برای ادغام
+            یکپارچه با OBS Studio، Streamlabs یا StreamElements طراحی شده است و
+            به شما امکان می‌دهد کانالی بسازید که منحصراً متعلق به شماست.
+            محبوب‌ترین جستجوهای ما را در زیر بررسی کنید!
+          </p>
+
+          <!-- جستجوهای معروف -->
+          <div class="">
+            <h3 class="mt-5">جستجوهای معروف</h3>
+            <div class="d-flex gap-4 flex-wrap">
+              <div
+                class="border border-dark border-3 px-4 py-3 rounded-4 font14"
+              >
+                پوشش توییچ
+              </div>
+              <div
+                class="border border-dark border-3 px-4 py-3 rounded-4 font14"
+              >
+                هشدار توییچ
+              </div>
+              <div
+                class="border border-dark border-3 px-4 py-3 rounded-4 font14"
+              >
+                پوشش چت باکس
+              </div>
+              <div
+                class="border border-dark border-3 px-4 py-3 rounded-4 font14"
+              >
+                پوشش چت باکس
+              </div>
+              <div
+                class="border border-dark border-3 px-4 py-3 rounded-4 font14"
+              >
+                پوشش چت باکس
+              </div>
+              <div
+                class="border border-dark border-3 px-4 py-3 rounded-4 font14"
+              >
+                هدف دونیت
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- سمت راست: باکس‌ها -->
+        <div class="col-md-6 col-12">
+          <div class="row g-5">
+            <div class="col-6">
+              <div
+                class="p-5 rounded-5 d-flex flex-column gap-4 align-items-center"
+                style="background-color: #f7f7f7"
+              >
+                <img
+                  src="./image/section/feature-chat-box-overlays-1.webp"
+                  class="w-100 rounded-4"
+                  alt="پوشش چت باکس"
+                />
+                <span class="font16 text-black fw-bold">پوشش چت باکس</span>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div
+                class="p-5 rounded-5 d-flex flex-column gap-4 align-items-center"
+                style="background-color: #f7f7f7"
+              >
+                <img
+                  src="./image/section/feature-all-products-1.webp"
+                  class="w-100 rounded-4"
+                  alt="همه محصولات"
+                />
+                <span class="font16 text-black fw-bold">همه محصولات</span>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div
+                class="p-5 rounded-5 d-flex flex-column gap-4 align-items-center"
+                style="background-color: #f7f7f7"
+              >
+                <img
+                  src="./image/section/feature-stream-alerts-1.webp"
+                  class="w-100 rounded-4"
+                  alt="هشدار استریم"
+                />
+                <span class="font16 text-black fw-bold">هشدار استریم</span>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div
+                class="p-5 rounded-5 d-flex flex-column gap-4 align-items-center"
+                style="background-color: #f7f7f7"
+              >
+                <img
+                  src="./image/section/feature-overlay-packs-1.webp"
+                  class="w-100 rounded-4"
+                  alt="پوشش استریم"
+                />
+                <span class="font16 text-black fw-bold">پوشش استریم</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-------------------------- End Section Upgrade Discraption -------------------------->
+
+    <!-------------------------- Start Section Discraptions -------------------------->
+    <div class="container py-100">
+      <!-- بخش اول -->
+      <div class="row g-5 align-items-center justify-content-center mb-100">
+        <div class="col-12 col-md-6 text-center text-md-end">
+          <img
+            src="./image/icon/Platforms-and-Software-uai-720x355.webp"
+            class="img-fluid w-75"
+            alt="پلتفرم‌ها و نرم‌افزارها"
+          />
+        </div>
+        <div class="col-12 col-md-6 text-start">
+          <h4 class="font34 fw-bold mb-4">
+            از سازگاری بی‌نقص با تمام پلتفرم‌ها و نرم‌افزارهای استریم مورد
+            علاقه‌تان لذت ببرید
+          </h4>
+          <p class="font16 py-4">
+            تجربه پخش زنده خود را با پوشش‌های متنوع ما، سازگار با Twitch، Kick و
+            YouTube و بهینه شده برای نرم‌افزارهای محبوبی مانند OBS Studio،
+            StreamElements و Streamlabs، ارتقا دهید.
+          </p>
+          <p class="font16">
+            با پشتیبانی اختصاصی مشتری و راهنماهای راه‌اندازی آسان ما، می‌توانید
+            در کمترین زمان محتوا تولید و پخش کنید. از نصب سریع برای جذب و مجذوب
+            کردن مخاطبان خود همین امروز لذت ببرید!
+          </p>
+        </div>
+      </div>
+
+      <!-- بخش دوم -->
+      <div class="row g-5 align-items-center justify-content-center py-50">
+        <div class="col-12 col-md-6 text-start order-2 order-md-1">
+          <h4 class="font34 fw-bold mb-4">
+            هشدارهای متحرک پویا و قابل تنظیم، پوشش‌های استریم و ویجت‌ها
+          </h4>
+          <p class="font16 py-4">
+            پوشش‌ها، هشدارها، انتقال صحنه‌ها و ویجت‌های قابل تنظیم ما که برای
+            پخش‌کنندگان زنده در Twitch، Kick و YouTube طراحی شده‌اند، به شما کمک
+            می‌کنند تا یک برند متمایز بسازید.
+          </p>
+          <p class="font16">
+            نصب بدون دردسر را با OBS Studio، StreamElements و Streamlabs تجربه
+            کنید و به شما این امکان را می‌دهد که روی آنچه واقعاً مهم است تمرکز
+            کنید: ایجاد محتوای استثنایی.
+          </p>
+          <a href="#/" class="btn btn-dark px-5 py-4 rounded-4 my-4 font20">
+            طرح خود را پیدا کنید
+          </a>
+        </div>
+        <div class="col-12 col-md-6 text-center order-1 order-md-2">
+          <img
+            src="./image/section/widgets-alerts-homepage-sml.avif"
+            class="img-fluid w-75"
+            alt="ویجت‌ها و هشدارها"
+          />
+        </div>
+      </div>
+
+      <!-- بخش سوم -->
+      <div class="row g-5 align-items-center justify-content-center py-50">
+        <div class="col-12 col-md-6 text-center">
+          <img
+            src="./image/section/Tutorial_Image2-uai-945x532.webp"
+            class="img-fluid w-75"
+            alt="آموزش‌ها"
+          />
+        </div>
+        <div class="col-12 col-md-6 text-start">
+          <h4 class="font34 fw-bold mb-4">
+            آموزش‌ها و نکات پخش زنده برای مبتدیان
+          </h4>
+          <p class="font16 py-4">
+            آیا در تنظیم پوشش‌ها و هشدارهای پخش خود مشکل دارید؟ به دنبال به
+            حداکثر رساندن تجربه خود با Streamlabs و StreamElements هستید؟ ما شما
+            را پوشش می‌دهیم.
+          </p>
+          <p class="font16">
+            با آموزش‌های جامع ما که برای کمک به موفقیت شما طراحی شده‌اند، نکات و
+            ترفندهای زیادی را برای OBS Studio، Streamlabs Desktop،
+            StreamElements و موارد دیگر کشف کنید.
+          </p>
+          <a href="#/" class="btn btn-dark px-5 py-4 rounded-4 my-4 font20">
+            مشاهده آموزش‌ها
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-------------------------- End Section Discraptions -------------------------->
+
+    <!-------------------------- Start Section Choose -------------------------->
+    <div class="container my-5">
+      <div class="rounded-5 px-4 py-5" style="background-color: #f7f7f7">
+        <h2 class="my-5 text-center fw-bold">
+          چی به دست میارید وقتی «Nerd Or Die» رو انتخاب می‌کنید
+        </h2>
+
+        <div class="row g-5 justify-content-center">
+          <!-- باکس ۱ -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div
+              class="d-flex flex-column gap-5 justify-content-center align-items-center text-center"
+            >
+              <img
+                src="./image/section/customizability.png"
+                width="120"
+                alt="سفارشی‌سازی بی‌نظیر"
+              />
+              <h3 class="font24 fw-bold">سفارشی‌سازی بی‌نظیر</h3>
+              <p class="font16 px-3">
+                از طرح‌بندی‌های مدولار تا گزینه‌های متنوع سفارشی‌سازی، پوشش‌های
+                ما به شما این امکان را می‌دهند تا طرحی برای استریم خود ایجاد
+                کنید که کاملاً متعلق به شما باشد.
+              </p>
+            </div>
+          </div>
+
+          <!-- باکس ۲ -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div
+              class="d-flex flex-column gap-5 justify-content-center align-items-center text-center"
+            >
+              <img
+                src="./image/section/professional-design.png"
+                width="120"
+                alt="طراحی حرفه‌ای"
+              />
+              <h3 class="font24 fw-bold">طراحی حرفه‌ای</h3>
+              <p class="font16 px-3">
+                با بیش از یک دهه تخصص، ما در طراحی اورلی‌های باکیفیت و جذاب که
+                برای استریمرها و سازندگان در هر سطح و اندازه مخاطب مناسب هستند،
+                تخصص داریم.
+              </p>
+            </div>
+          </div>
+
+          <!-- باکس ۳ -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <div
+              class="d-flex flex-column gap-5 justify-content-center align-items-center text-center"
+            >
+              <img
+                src="./image/section/easy-setup.png"
+                width="120"
+                alt="راه‌اندازی آسان"
+              />
+              <h3 class="font24 fw-bold">راه‌اندازی آسان</h3>
+              <p class="font16 px-3">
+                صرف نظر از اینکه تازه شروع کرده‌اید یا یک استریمر باتجربه،
+                لایه‌ها و ویجت‌های خود را با چند کلیک نصب کنید. کاملاً با OBS
+                Studio و سایر پلتفرم‌های برتر استریمینگ سازگار است.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-------------------------- End Section Choose -------------------------->
+
+    <!-------------------------- Start Section End -------------------------->
+    <div class="container my-5">
+      <div class="font30 py-100 text-center">
+        Nerd Or Die با افزایش ارزش تولید محتوا، تولیدکنندگان و استریمرها را
+        ارتقا می‌دهد. هر پوشش، هشدار، ویجت و قالب با دقت طراحی شده است تا به طور
+        یکپارچه در Twitch، YouTube و Kick کار کند.
+      </div>
+    </div>
+    <!-------------------------- End Section End -------------------------->
+
+    <!-------------------------- Start Footer -------------------------->
+    <footer class="bg-black py-5">
+      <div class="container">
+        <div class="row align-items-center text-center text-md-start">
+          <!-- لوگو -->
+          <div class="col-12 col-md-4 mb-4 mb-md-0">
+            <img
+              src="./image/header/logo-lib.png"
+              alt="لوگوی Nerd Or Die"
+              class="img-fluid"
+              style="max-height: 60px"
+            />
+          </div>
+
+          <!-- متن توضیحات -->
+          <div class="col-12 col-md-8">
+            <p class="text-light font18 my-4">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+              استفاده از طراحان گرافیک است
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-------------------------- End Footer -------------------------->
+
+    <script src="./assets/js/bootstrap.bundle.js"></script>
+    <script src="./assets/js/particles.js"></script>
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>

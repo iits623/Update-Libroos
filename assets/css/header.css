@@ -1,0 +1,86 @@
+.header-logo {
+  font-family: JosefinSans;
+}
+.navbar-header {
+  width: 100%;
+}
+.box-StreamElements img,
+.box-Streamlabs img,
+.box-Meld img,
+.box-Studio img,
+.box-YouTube img,
+.box-Kick img,
+.box-Aparat img,
+.box-Twitch img {
+  width: 32px;
+  height: 32px;
+}
+.box-StreamElements,
+.box-Streamlabs,
+.box-Meld,
+.box-Studio,
+.box-YouTube,
+.box-Kick,
+.box-Twitch,
+.box-Aparat {
+  width: 60px;
+  height: 60px;
+  transition: 0.2s;
+}
+.box-StreamElements:hover,
+.box-Streamlabs:hover,
+.box-Meld:hover,
+.box-Studio:hover,
+.box-YouTube:hover,
+.box-Kick:hover,
+.box-Aparat:hover,
+.box-Twitch:hover {
+  transform: scale(1.07);
+  filter: brightness(1.25);
+}
+.box-StreamElements {
+  background-color: #0a2d3d;
+}
+.box-Streamlabs {
+  background-color: #0d3e3a;
+}
+.box-Meld {
+  background-color: #244a7a;
+}
+.box-Studio {
+  background-color: #2b2b2b;
+}
+.box-YouTube {
+  background-color: #5a0000;
+}
+.box-Kick {
+  background-color: #1f3d12;
+}
+.box-Twitch {
+  background-color: #3b2570;
+}
+.box-Aparat {
+  background-color: #6e0631;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.content {
+  backdrop-filter: blur(20px);
+}
+@media (max-width: 768px) {
+  .navbar-header {
+    width: auto;
+  }
+  .text-offcanvas {
+    color: white;
+  }
+}
