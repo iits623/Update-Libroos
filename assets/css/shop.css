@@ -1,0 +1,29 @@
+#particles-js {
+  background: url("../../image/section/all-collage-header-wide.jpg");
+  position: absolute;
+  width: 100%;
+  height: 70vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#particles-js canvas {
+  filter: blur(40px) drop-shadow(0 0 60px rgba(43, 0, 102, 0.61));
+  animation: soft-glow 15s infinite ease-in-out;
+}
+
+@keyframes soft-glow {
+  0%,
+  100% {
+    filter: blur(40px) drop-shadow(0 0 60px rgba(43, 0, 102, 0.5));
+  }
+  50% {
+    filter: blur(60px) drop-shadow(0 0 80px rgba(43, 0, 102, 0.8));
+  }
+}
+
+.side-bar-filter {
+  position: sticky;
+  top: 100px;
+  align-self: flex-start;
+}

@@ -8,7 +8,6 @@
 }
 * {
   font-family: IRANSans, JosefinSans;
-  /* border: 1px solid; */
 }
 .font60 {
   font-size: 60px;
@@ -85,4 +84,9 @@
 .nav-link {
   color: black;
 }
-
+.main-text-color {
+  color: #a9f868 !important;
+}
+.main-bg-light {
+  background-color: #f7f7f7;
+}
