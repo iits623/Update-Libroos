@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/bootstrap.rtl.css" />
+    <link rel="stylesheet" href="./assets/css/custom.css" />
+    <link rel="stylesheet" href="./assets/css/header.css" />
+    <link rel="stylesheet" href="./assets/css/shop.css" />
+    <title>Document</title>
+  </head>
+  <body class="">
+    <!-------------------------- Start Navbar -------------------------->
+    <header>
+      <div class="container">
+        <nav
+          class="navbar navbar-expand-md z-2 py-2 shadow-lg overflow-x-hidden fixed-top bg-light"
+        >
+          <div class="container d-flex justify-content-between">
+            <button
+              class="navbar-toggler d-md-none"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#mobileMenu"
+              aria-controls="mobileMenu"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div
+              class="navbar-header d-flex align-items-center justify-content-between"
+            >
+              <div class="header-logo font30 fw-bolder d-none d-md-block">
+                <a href="{% url 'index' %}">
+                  <img
+                    src="./image/header/logo-lib.png"
+                    width="200"
+                    alt="لوگوی سایت"
+                  />
+                </a>
+              </div>
+
+              <div
+                class="collapse navbar-collapse flex-grow-0 d-none d-md-block"
+              >
+                <ul
+                  class="navbar-nav p-2 d-flex align-items-center gap-4 font18"
+                >
+                  <li class="nav-item">
+                    <a
+                      class="nav-link text-nowrap link-header"
+                      href="{% url 'shop' %}"
+                      >فروشگاه</a
+                    >
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link link-header" href="{% url 'blogs' %}"
+                      >آموزش</a
+                    >
+                  </li>
+
+                  <li class="nav-item">
+                    <a
+                      class="nav-link text-nowrap link-header"
+                      href="{% url 'shop' %}"
+                      >درباره ما</a
+                    >
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link link-header" href="{% url 'support'%}"
+                      >پشتیبانی</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link link-header" href="www.libroos-team.ir"
+                      >لیبروس گیم</a
+                    >
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <ul
+                  class="list-unstyled d-flex align-items-center gap-4 m-0 p-0"
+                >
+                  <li class="nav-item d-none d-md-block">
+                    <a class="nav-link link-header" href="#/">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="22"
+                        height="22"
+                        fill="currentColor"
+                        class="bi bi-twitter-x"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="nav-item d-none d-md-block">
+                    <a class="nav-link link-header" href="#/">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="22"
+                        height="22"
+                        fill="currentColor"
+                        class="bi bi-youtube"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link link-header" href="#/">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="22"
+                        height="22"
+                        fill="currentColor"
+                        class="bi bi-search"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link link-header" href="#/">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="26"
+                        height="26"
+                        fill="currentColor"
+                        class="bi bi-person"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link link-header" href="#/">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="22"
+                        height="22"
+                        fill="currentColor"
+                        class="bi bi-bag"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div
+          class="offcanvas offcanvas-end bg-black text-light text-end w-75"
+          tabindex="-1"
+          id="mobileMenu"
+          aria-labelledby="mobileMenuLabel"
+        >
+          <div class="offcanvas-header justify-content-end">
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="بستن"
+            ></button>
+          </div>
+          <div class="offcanvas-body px-4 py-3">
+            <ul class="navbar-nav font18 p-0">
+              <li class="nav-item">
+                <a class="nav-link text-offcanvas" href="#/">فروشگاه</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-offcanvas" href="#/">آموزش</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-offcanvas" href="#/">درباره ما </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-offcanvas" href="#/">پشتیبانی</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-offcanvas" href="#/">لیبروس گیم</a>
+              </li>
+
+              <li class="nav-item mt-4">
+                <div class="d-flex gap-4">
+                  <a class="nav-link link-header text-offcanvas" href="#/">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="22"
+                      height="22"
+                      fill="currentColor"
+                      class="bi bi-twitter-x"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"
+                      />
+                    </svg>
+                  </a>
+                  <a class="nav-link link-header text-offcanvas" href="#/">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="22"
+                      height="22"
+                      fill="currentColor"
+                      class="bi bi-youtube"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-------------------------- End Navbar -------------------------->
+
+    <!-------------------------- Start Header -------------------------->
+    <header>
+      <div class="">
+        <div id="particles-js" class="position-absolute w-100"></div>
+        <div class="top-0 left-0 text-light position-relative">
+          <div class="container">
+            <div class="py-100">
+              <h1 class="main-text-color font42 mt-5">هشدار های استریم</h1>
+              <p class="w-50 my-4 font18">
+                اعلان‌های کاملاً متحرک برای Twitch، YouTube و Kick. این
+                اعلان‌های استریم با Streamlabs و StreamElements کار می‌کنند.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-------------------------- End Header -------------------------->
+
+    <!-------------------------- Start Section Serveices -------------------------->
+    <div class="container">
+      <div class="d-flex gap-5 mt-150 mb-4">
+        <span> مرتب سازی بر اساس اخرین </span>
+        <span>34 ایتم</span>
+      </div>
+
+      <div class="row position-relative">
+        <!-------------- Start SideBar Filter Serveices -------------->
+        <div class="col-2 side-bar-filter">
+          <div class="p-4 rounded-4 main-bg-light mb-5">
+            <div class="">
+              <span class=""> ظاهر ها </span>
+              <hr class="w-100 my-4" />
+              <div class="d-flex flex-column gap-2">
+                <div class="d-flex align-items-center gap-2">
+                  <input type="checkbox" id="light" />
+                  <label for="light">روشن</label>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <input type="checkbox" id="dark" />
+                  <label for="dark">تیره</label>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <input type="checkbox" id="animation" />
+                  <label for="animation">انیمه</label>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <input type="checkbox" id="cute" />
+                  <label for="cute">کیوت</label>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <input type="checkbox" id="minimal" />
+                  <label for="minimal">مینیمال</label>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <input type="checkbox" id="fantesy" />
+                  <label for="fantesy">فانتزی</label>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <input type="checkbox" id="fashion" />
+                  <label for="fashion">مد</label>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <input type="checkbox" id="seasonal" />
+                  <label for="seasonal">فصلی</label>
+                </div>
+              </div>
+            </div>
+            <div class="my-5">
+              <span class=""> پلتفرم‌ها </span>
+              <hr class="w-100 my-4" />
+              <div class="">
+                <div class="d-flex gap-2 align-items-center mt-2">
+                  <img
+                    src="./image/icon/ico_aparat.svg"
+                    class="img-fluid"
+                    width="35px"
+                    alt=""
+                  />
+                  <span>آپارات</span>
+                </div>
+                <div class="d-flex gap-2 align-items-center mt-2">
+                  <img
+                    src="./image/icon/ico_youtube.svg"
+                    class="img-fluid"
+                    width="35px"
+                    alt=""
+                  />
+                  <span>یوتیوب</span>
+                </div>
+                <div class="d-flex gap-2 align-items-center mt-2">
+                  <img
+                    src="./image/icon/ico_kick.svg"
+                    class="img-fluid"
+                    width="35px"
+                    alt=""
+                  />
+                  <span>کیک</span>
+                </div>
+                <div class="d-flex gap-2 align-items-center mt-2">
+                  <img
+                    src="./image/icon/ico_twitch.svg"
+                    class="img-fluid"
+                    width="35px"
+                    alt=""
+                  />
+                  <span>توییچ</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-------------- End SideBar Filter Serveices -------------->
+
+        <!-------------- Start List All Serveices -------------->
+        <div class="col-10">
+          <div class="row">
+            <div class="col-3">
+              <div class="d-flex flex-column align-items-center mb-5">
+                <img
+                  src="./image/header/box1.jpg"
+                  alt=""
+                  class="img-fluid rounded-3 mb-2"
+                />
+                <span>محصول 1</span>
+                <span>100ریال</span>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="d-flex flex-column align-items-center mb-5">
+                <img
+                  src="./image/header/box2.jpg"
+                  alt=""
+                  class="img-fluid rounded-3 mb-2"
+                />
+                <span>محصول 2</span>
+                <span>100ریال</span>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="d-flex flex-column align-items-center mb-5">
+                <img
+                  src="./image/header/box3.jpg"
+                  alt=""
+                  class="img-fluid rounded-3 mb-2"
+                />
+                <span>محصول 3</span>
+                <span>100ریال</span>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="d-flex flex-column align-items-center mb-5">
+                <img
+                  src="./image/header/box4.jpg"
+                  alt=""
+                  class="img-fluid rounded-3 mb-2"
+                />
+                <span>محصول 4</span>
+                <span>100ریال</span>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="d-flex flex-column align-items-center mb-5">
+                <img
+                  src="./image/header/box5.jpg"
+                  alt=""
+                  class="img-fluid rounded-3 mb-2"
+                />
+                <span>محصول 5</span>
+                <span>100ریال</span>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="d-flex flex-column align-items-center mb-5">
+                <img
+                  src="./image/header/box1.jpg"
+                  alt=""
+                  class="img-fluid rounded-3 mb-2"
+                />
+                <span>محصول 6</span>
+                <span>100ریال</span>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="d-flex flex-column align-items-center mb-5">
+                <img
+                  src="./image/header/box2.jpg"
+                  alt=""
+                  class="img-fluid rounded-3 mb-2"
+                />
+                <span>محصول 7</span>
+                <span>100ریال</span>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="d-flex flex-column align-items-center mb-5">
+                <img
+                  src="./image/header/box3.jpg"
+                  alt=""
+                  class="img-fluid rounded-3 mb-2"
+                />
+                <span>محصول 8</span>
+                <span>100ریال</span>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="d-flex flex-column align-items-center mb-5">
+                <img
+                  src="./image/header/box4.jpg"
+                  alt=""
+                  class="img-fluid rounded-3 mb-2"
+                />
+                <span>محصول 9</span>
+                <span>100ریال</span>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="d-flex flex-column align-items-center mb-5">
+                <img
+                  src="./image/header/box5.jpg"
+                  alt=""
+                  class="img-fluid rounded-3 mb-2"
+                />
+                <span>محصول 10</span>
+                <span>100ریال</span>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="d-flex flex-column align-items-center mb-5">
+                <img
+                  src="./image/header/box1.jpg"
+                  alt=""
+                  class="img-fluid rounded-3 mb-2"
+                />
+                <span>محصول 6</span>
+                <span>100ریال</span>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="d-flex flex-column align-items-center mb-5">
+                <img
+                  src="./image/header/box2.jpg"
+                  alt=""
+                  class="img-fluid rounded-3 mb-2"
+                />
+                <span>محصول 7</span>
+                <span>100ریال</span>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="d-flex flex-column align-items-center mb-5">
+                <img
+                  src="./image/header/box3.jpg"
+                  alt=""
+                  class="img-fluid rounded-3 mb-2"
+                />
+                <span>محصول 8</span>
+                <span>100ریال</span>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="d-flex flex-column align-items-center mb-5">
+                <img
+                  src="./image/header/box4.jpg"
+                  alt=""
+                  class="img-fluid rounded-3 mb-2"
+                />
+                <span>محصول 9</span>
+                <span>100ریال</span>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="d-flex flex-column align-items-center mb-5">
+                <img
+                  src="./image/header/box5.jpg"
+                  alt=""
+                  class="img-fluid rounded-3 mb-2"
+                />
+                <span>محصول 10</span>
+                <span>100ریال</span>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="d-flex flex-column align-items-center mb-5">
+                <img
+                  src="./image/header/box1.jpg"
+                  alt=""
+                  class="img-fluid rounded-3 mb-2"
+                />
+                <span>محصول 6</span>
+                <span>100ریال</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-------------- End List All Serveices -------------->
+      </div>
+    </div>
+    <!-------------------------- End Section Serveices -------------------------->
+
+    <!-------------------------- Start Section Descraption -------------------------->
+    <div class="container">
+      <hr class="w-100 mt-100" />
+      <div class="my-5">
+        <div class="d-flex flex-column gap-2 my-5">
+          <h2 class="font28 fw-bold">هشدارهای استریم چیست؟</h2>
+          <p class="font18">
+            در این زمینه، هشدارهای استریم به اعلان‌هایی اشاره دارد که در حین یک
+            استریم زنده نمایش داده می‌شوند و تعاملات بینندگان مانند
+            دنبال‌کنندگان جدید، مشترکین یا کمک‌های مالی را نشان می‌دهند.
+          </p>
+          <p class="font18">
+            آنها که در نرم‌افزارها یا پلتفرم‌های استریم مانند توییچ، یوتیوب یا
+            کیک ادغام شده‌اند، بازخورد فوری به استریمرها ارائه می‌دهند و تعامل
+            بینندگان را با تصاویر و صداهای قابل تنظیم افزایش می‌دهند.
+          </p>
+        </div>
+        <div class="d-flex flex-column gap-2 my-5">
+          <h2 class="font28 fw-bold">چرا هشدارهای استریم مهم هستند ؟</h2>
+          <p class="font18">
+            اول از همه، آیا هشدارهای Twitch اصلاً مهم هستند؟ پاسخ قطعاً بله است.
+            می‌دانید آن لحظه که کسی یک فالو می‌کند و شما کاملاً آن را از دست
+            می‌دهید زیرا در وسط یک مبارزه با یک رئیس هستید؟ آره، اونجا بودم.
+            هشدارها فقط پاپ‌آپ‌های فانتزی نیستند - آنها راهی برای نشان دادن
+            قدردانی شما هستند وقتی که خیلی سرتان شلوغ است که به چت نگاه کنید. به
+            من اعتماد کنید، بینندگان متوجه می‌شوند که از حمایت آنها قدردانی
+            می‌شود.
+          </p>
+        </div>
+
+        <div class="d-flex flex-column gap-2 my-5">
+          <h2 class="font28 fw-bold">
+            چگونه هشدارهای Twitch خود را تنظیم کنم؟
+          </h2>
+          <ol class="font18">
+            <li class="my-3">
+              <strong>انتخاب یک سرویس هشدار</strong>: پلتفرم یا سرویسی را انتخاب
+              کنید که قابلیت هشدار را ارائه می‌دهد. گزینه‌های محبوب شامل
+              <a href="https://streamlabs.com/">Streamlabs</a> و
+              <a href="https://streamelements.com/">StreamElements</a> هستند. هر
+              سرویس مجموعه ویژگی‌ها و گزینه‌های سفارشی‌سازی خاص خود را ارائه
+              می‌دهد.
+            </li>
+            <li class="my-3">
+              <strong>ثبت‌نام و اتصال حساب‌ها</strong>: در وب‌سایت سرویس هشدار
+              انتخابی خود یک حساب کاربری ایجاد کنید و آن را به حساب پلتفرم پخش
+              خود (مثلاً Twitch یا YouTube) پیوند دهید.
+            </li>
+            <li class="my-3">
+              <strong>سفارشی‌سازی هشدارها</strong>: تنظیمات هشدار خود، از جمله
+              طراحی بصری، جلوه‌های صوتی و شرایط راه‌اندازی (مثلاً دنبال‌کنندگان
+              جدید، مشترکین، کمک‌های مالی) را سفارشی کنید.
+            </li>
+            <li class="my-3">
+              <strong>کپی کردن URL</strong>: پس از سفارشی‌سازی هشدارهای خود،
+              سرویس یک URL منحصر به فرد برای پوشش هشدار شما ارائه می‌دهد. آدرس
+              اینترنتی ارائه شده را کپی کنید.
+            </li>
+            <li class="my-3">
+              <strong>افزودن آدرس اینترنتی هشدار به نرم‌افزار پخش جریانی</strong
+              >: نرم‌افزار پخش جریانی خود (OBS Studio، Streamlabs Desktop) را
+              باز کنید و یک منبع «مرورگر» اضافه کنید. آدرس اینترنتی کپی شده را
+              در فیلد ارائه شده جایگذاری کنید.
+            </li>
+            <li class="my-3">
+              <strong>آزمایش هشدارها</strong>: پس از افزودن، هشدارهای خود را
+              آزمایش کنید تا مطمئن شوید که به درستی در پخش جریانی شما نمایش داده
+              می‌شوند. بسیاری از سرویس‌های هشدار، یک ویژگی آزمایشی برای این
+              منظور ارائه می‌دهند.
+            </li>
+            <li class="my-3">
+              <strong>شروع پخش جریانی</strong>: پس از تنظیم و آزمایش هشدارها،
+              پخش زنده خود را شروع کنید و اکنون هشدارهای شما باید با تعامل
+              بینندگان با پخش جریانی شما فعال شوند.
+            </li>
+          </ol>
+        </div>
+        <div class="d-flex flex-column gap-2 my-5">
+          <h2 class="font28 fw-bold">
+            از کجا می توانم هشدارهای استریم را دریافت کنم؟
+          </h2>
+          <p class="font18">
+            می‌توانید هشدارهای با کیفیت بالای Twitch را از Nerd Or Die دریافت
+            کنید. همچنین، گزینه‌های رایگان هشدار Twitch نیز در دسترس هستند که به
+            شما امکان می‌دهند بهترین گزینه را برای استریم خود انتخاب کنید.
+            هشدارهای استریم Nerd Or Die به صورت حرفه‌ای طراحی و کدگذاری شده‌اند
+            تا گزینه‌هایی را برای سفارشی‌سازی و تنظیم هشدارها مطابق با سبک خود
+            ارائه دهند.
+          </p>
+        </div>
+      </div>
+      <hr class="w-100" />
+    </div>
+    <!-------------------------- End Section Descraption -------------------------->
+
+    <!-------------------------- Start Footer -------------------------->
+    <footer class="bg-black py-5">
+      <div class="container">
+        <div class="row align-items-center text-center text-md-start">
+          <!-- لوگو -->
+          <div class="col-12 col-md-4 mb-4 mb-md-0">
+            <img
+              src="./image/header/logo-lib.png"
+              alt="لوگوی Nerd Or Die"
+              class="img-fluid"
+              style="max-height: 60px"
+            />
+          </div>
+
+          <!-- متن توضیحات -->
+          <div class="col-12 col-md-8">
+            <p class="text-light font18 my-4">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+              استفاده از طراحان گرافیک است
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-------------------------- End Footer -------------------------->
+
+    <script src="./assets/js/bootstrap.bundle.js"></script>
+    <script src="./assets/js/particles.js"></script>
+    <script src="./assets/js/particles-shop.js"></script>
+  </body>
+</html>
